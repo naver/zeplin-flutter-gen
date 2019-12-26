@@ -15,7 +15,8 @@
     "email": "yutae.choi@navercorp.com"
   },
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/naver/zeplin-flutter-gen.git"
   },
   "zeplin": {
     "displayName": "Flutter Gen",
