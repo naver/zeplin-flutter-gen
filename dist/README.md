@@ -26,6 +26,9 @@ The generated code format is set to [`dartfmt(dart_style)`](https://github.com/d
 
 **Options**
 
+<img width="450" alt="preferences" src="https://user-images.githubusercontent.com/14192093/71803976-8d80ff80-30a5-11ea-9254-f42849b98ae9.png">
+
+
 <a href="#options">Many options</a> are available in the format you want.
 
 ex) Option: Use color name ✅

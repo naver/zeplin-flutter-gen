@@ -2,7 +2,7 @@
   "packageName": "flutter-gen",
   "name": "Flutter Gen",
   "description": "The Flutter dart code generator from zeplin. ex) Container, Text, Color, TextStyle, ... - Save your time.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "yutae",
     "email": "yutae.choi@navercorp.com"
@@ -87,5 +87,6 @@
     "ios"
   ],
   "moduleURL": "./main.js",
+  "repository": "https://github.com/naver/zeplin-flutter-gen.git",
   "readmeURL": "./README.md"
 }
