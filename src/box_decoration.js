@@ -60,7 +60,7 @@ export function toDart(context, decoration, depth = 1) {
     if (decoration.border != null && decoration.border != undefined) {
         const dartFromBorder = border.toDart(context, decoration.border, depth + 1);
         if (dartFromBorder != null&& dartFromBorder != undefined) {
-            colorElement = `\n${depthStr}border: ${dartFromBorder}`;
+            borderElement = `\n${depthStr}border: ${dartFromBorder}`;
         }
     }
 
