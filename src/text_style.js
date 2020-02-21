@@ -87,7 +87,7 @@ export function toDart(context, textStyle, depth = 1, useName = true) {
     }
     
     if (textStyle.shadows != null) {
-        shadowElements = `\n${depthStr}shadows: ${boxShadows.toDart(context, textStyle.shadows)}`;
+        shadowElements = `\n${depthStr}shadows: ${boxShadows.toDart(context, textStyle.shadows, depth + 1)}`;
     }
 
     return `TextStyle(
