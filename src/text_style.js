@@ -71,9 +71,6 @@ export function toDart(context, textStyle, depth = 1, useName = true) {
             fontStyleElement = `\n${depthStr}fontStyle: FontStyle.${textStyle.fontStyle},`;
         } 
     } 
-    if (textStyle.shadows != null) {
-        shadowElements = `\n${depthStr}shadows: ${boxShadows.toDart(context, textStyle.shadows)},`;
-    }
     
     if (textStyle.letterSpacing != null) {
        if (!options.skipLetterSpacing(context)) {
@@ -88,9 +85,13 @@ export function toDart(context, textStyle, depth = 1, useName = true) {
             }
         } 
     }
+    
+    if (textStyle.shadows != null) {
+        shadowElements = `\n${depthStr}shadows: ${boxShadows.toDart(context, textStyle.shadows, depth + 1)}`;
+    }
 
     return `TextStyle(
-${depthStr}color: ${color.toDart(context, textStyle.color, 1)},${fontSizeElement}${fontFamilyElement}${fontWeightElement}${fontStyleElement}${letterSpacingElement}${shadowElements}${lineHeightElement}
+${depthStr}color: ${color.toDart(context, textStyle.color, 1)},${fontSizeElement}${fontFamilyElement}${fontWeightElement}${fontStyleElement}${letterSpacingElement}${lineHeightElement}${shadowElements}
 ${endDepthStr})`;
 }
 
