@@ -79,9 +79,10 @@ export function toDart(context, textStyle, depth = 1, useName = true) {
     }
 
     if (textStyle.height != null) {
-        if (!(skipDefaultValue && textStyle.height == 1.0)) {
+        const height = textStyle.height / textStyle.fontSize;
+        if (!(skipDefaultValue && height == 1.0)) {
             if (!options.skipLineHeight(context)) {
-                lineHeightElement = `\n${depthStr}height: ${textStyle.height},`;
+                lineHeightElement = `\n${depthStr}height: ${height},`;
             }
         } 
     }
