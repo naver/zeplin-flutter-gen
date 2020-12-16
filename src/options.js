@@ -36,9 +36,9 @@ export function useColorName(context) {
 
 export function textWidgetClassName(context) {
     var name = "Text";
-    const optionClassPrefix = context.getOption(OPTION_KEYS.TEXT_WIDGET_CLASS_NAME)
-    if (optionClassPrefix != null && optionClassPrefix != '') {
-        name = optionClassPrefix;
+    const optionClassName = context.getOption(OPTION_KEYS.TEXT_WIDGET_CLASS_NAME)
+    if (optionClassName != null && optionClassName != '') {
+        name = optionClassName;
     }
     return name;
 }
