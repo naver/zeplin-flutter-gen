@@ -64,38 +64,49 @@ function textToDart(context, textSelected) {
     if (!skipStrutStyleSkipped) {
         strutStyleElement = `\n\tstrutStyle: ${strutStyle.toDart(context, textSelected.textStyle, 2)},`;
     }   
+    
+    const name = options.textWidgetClassName(context);
 
-    return `Text('${textSelected.text}',
+    return `${name}('${textSelected.text}',
 \tstyle: ${textStyle.toDart(context, textSelected.textStyle, 2)},${strutStyleElement}
 ),`;
 }
 
 function richTextToDart(context, textSpans) {
+    var styleElement = "";
     var strutStyleElement = "";
-    const skipStrutStyleSkipped = options.SkipStrutStyleSkipped(context);
-    if (!skipStrutStyleSkipped) {
-        var ts;
-        for (var i = 0; i < textSpans.length; i++) {
-            const style = textSpans[i].textStyle;
-            if (ts == null) {
-                ts = style;
-            } else {
-                if (style.fontSize == ts.fontSize) {
-                    if (style.fontWeight > ts.fontWeight) {
-                        ts = style;
-                    }
-                } else if (style.fontSize > ts.fontSize) {
-                    ts = style;
+
+    var largestTextStyle;
+    for (var i = 0; i < textSpans.length; i++) {
+        const style = textSpans[i].textStyle;
+        if (largestTextStyle == null) {
+            largestTextStyle = style;
+        } else {
+            if (style.fontSize == largestTextStyle.fontSize) {
+                if (style.fontWeight > largestTextStyle.fontWeight) {
+                    largestTextStyle = style;
                 }
+            } else if (style.fontSize > largestTextStyle.fontSize) {
+                largestTextStyle = style;
             }
         }
-        strutStyleElement = `\n\tstrutStyle: ${strutStyle.toDart(context, ts, 2)},`;
     }
 
-    return `RichText(${strutStyleElement}
-\ttext: TextSpan(
+    if (largestTextStyle != null) {
+        styleElement = `\n\tstyle: ${textStyle.toDart(context, largestTextStyle, 2)},`;
+    }
+
+    const skipStrutStyleSkipped = options.SkipStrutStyleSkipped(context);
+    if (!skipStrutStyleSkipped && largestTextStyle != null) {
+        strutStyleElement = `\n\tstrutStyle: ${strutStyle.toDart(context, largestTextStyle, 2)},`;
+    }
+
+    const name = options.textWidgetClassName(context);
+
+    return `${name}.rich(
+\tTextSpan(
 \t\tchildren: [${textSpans.map( ts => { return "\n\t\t\t" + textSpan.toDart(context, ts, 4)})},
 \t\t],
-\t),
+\t),${styleElement}${strutStyleElement}
 ),`;
 }
