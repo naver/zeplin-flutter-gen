@@ -39,6 +39,12 @@
         "default": true
       },
       {
+        "name": "Text widget class name. It can be used for custom class. ex) class StrutText",
+        "type": "text",
+        "id": "textWidgetClassName",
+        "default": "Text"
+      },
+      {
         "name": "TextStyle class name prefix ex) class ZeplinTextStyles",
         "type": "text",
         "id": "textStylesClassPrefix",

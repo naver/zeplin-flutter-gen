@@ -5,6 +5,7 @@
 const OPTION_KEYS = {
     COLORS_CLASS_PREFIX: "colorsClassPrefix",
     USE_COLOR_NAME: "useColorName",
+    TEXT_WIDGET_CLASS_NAME: "textWidgetClassName",
     TEXTSTYLES_CLASS_PREFIX: "textStylesClassPrefix",
     USE_TEXTSTYLE_NAME: "useTextStyleName",
     SKIP_DEFAULT_VALUE: "defaultValueSkipped",
@@ -31,6 +32,15 @@ export function colorsClassPrefix(context) {
 
 export function useColorName(context) {
     return context.getOption(OPTION_KEYS.USE_COLOR_NAME);
+}
+
+export function textWidgetClassName(context) {
+    var name = "Text";
+    const optionClassPrefix = context.getOption(OPTION_KEYS.TEXT_WIDGET_CLASS_NAME)
+    if (optionClassPrefix != null && optionClassPrefix != '') {
+        name = optionClassPrefix;
+    }
+    return name;
 }
 
 export function textStylesClassPrefix(context) {

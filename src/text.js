@@ -64,8 +64,10 @@ function textToDart(context, textSelected) {
     if (!skipStrutStyleSkipped) {
         strutStyleElement = `\n\tstrutStyle: ${strutStyle.toDart(context, textSelected.textStyle, 2)},`;
     }   
+    
+    const name = options.textWidgetClassName(context);
 
-    return `Text('${textSelected.text}',
+    return `${name}('${textSelected.text}',
 \tstyle: ${textStyle.toDart(context, textSelected.textStyle, 2)},${strutStyleElement}
 ),`;
 }
