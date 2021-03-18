@@ -52,67 +52,67 @@ class ZeplinColors {
 #### `Container` - Layer with shadow:
 ```dart
 Container(
-	height: 100,
-	margin: EdgeInsets.only(
-		left: 50,
-		right: 50,
-	),
-	decoration: BoxDecoration(
-		boxShadow: [
-			BoxShadow(
-				color: ZeplinColors.black50,
-				offset: Offset(0, 2),
-				blurRadius: 4,
-				spreadRadius: 6,
-			),
-		],
-	),
+   height: 100,
+   margin: EdgeInsets.only(
+      left: 50,
+      right: 50,
+   ),
+   decoration: BoxDecoration(
+      boxShadow: [
+         BoxShadow(
+            color: ZeplinColors.black50,
+            offset: Offset(0, 2),
+            blurRadius: 4,
+            spreadRadius: 6,
+         ),
+      ],
+   ),
 ),
 ```
 
 #### `Text` - Text layer
 ```dart
 Text('Type something',
-	style: TextStyle(
-		color: ZeplinColors.black,
-		fontSize: 20,
-		fontFamily: 'SFProText',
-	),
+   style: TextStyle(
+      color: ZeplinColors.black,
+      fontSize: 20,
+      fontFamily: 'SFProText',
+   ),
 ),
 ```
 
 #### `RichText` - Text layer with multiple styles
 ```dart
 RichText(
-	text: TextSpan(
-		children: [
-			TextSpan(
-				text: 'Type',
-				style: TextStyle(
-					color: ZeplinColors.black,
-					fontSize: 20,
-					fontFamily: 'SFProText',
-					fontWeight: FontWeight.w500,
-				),
-			),
-			TextSpan(
-				text: 'something',
-				style: TextStyle(
-					color: ZeplinColors.black,
-					fontSize: 20,
-					fontFamily: 'SFProText',
-				),
-			),
-			TextSpan(
-				text: 'red',
-				style: TextStyle(
-					color: ZeplinColors.red,
-					fontSize: 20,
-					fontFamily: 'SFProText',
-				),
-			),
-		],
-	),
+   text: TextSpan(
+      children: [
+         TextSpan(
+            text: 'Type',
+            style: TextStyle(
+               color: ZeplinColors.black,
+               fontSize: 20,
+               fontFamily: 'SFProText',
+               fontWeight: FontWeight.w500,
+            ),
+         ),
+         TextSpan(
+            text: 'something',
+            style: TextStyle(
+               color: ZeplinColors.black,
+               fontSize: 20,
+               fontFamily: 'SFProText',
+            ),
+         ),
+         TextSpan(
+            text: 'red',
+            style: TextStyle(
+               color: ZeplinColors.red,
+               fontSize: 20,
+               fontFamily: 'SFProText',
+            ),
+         ),
+      ],
+   ),
 ),
 ```
 
