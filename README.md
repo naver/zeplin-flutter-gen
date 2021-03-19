@@ -122,6 +122,7 @@ RichText(
 |:-------------------------------------------|:------------------------------------------- |:-------------------------------------------------------- |
 | Color class name prefix                    | `Zeplin`                                    | `class ZeplinColors`                                     |
 | Use color name                             | `true`                                      | `Color(0xffffffff)` => `ZeplinColors.white`              |
+| Text class name prefix                     | ` `                                         | `Text` => `CustomText`                                   |
 | TextStyle class name prefix                | `Zeplin`                                    | `class ZeplinTextStyles`                                 |
 | Use text style name                        | `false`                                     | `ZeplinTextStyles.title`                                 |
 | Skip Default value                         | `true`                                      | ~~FontWeight.w400~~, ~~FontStyle.normal~~                |
