@@ -1,5 +1,5 @@
-# Flutter Gen Zeplin Extension 🚀
-The Flutter dart code generator from zeplin. ex) Container, Text, Color, TextStyle, ... - Save your time.
+# Flutter Gen Zeplin Extension 🚀 
+The Flutter dart code generator from zeplin. ex) Container, Text, Color, TextStyle, ... - Save your time. `⬇ 1.1k`
 
 ## Getting started
 Add the extension to your project from [extensions.zeplin.io](https://extensions.zeplin.io).
