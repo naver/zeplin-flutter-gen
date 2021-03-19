@@ -42,10 +42,10 @@ Colors.white /// ⭕️
 #### `Colors` (Project)
 ```dart
 class ZeplinColors {
-	static const Color red = Color(0xffff0000);
-	static const Color green = Color(0xff00ff00);
-	static const Color yellow = Color(0xffffff00);
-	static const Color white = Color(0xffffffff);
+   static const Color red = Color(0xffff0000);
+   static const Color green = Color(0xff00ff00);
+   static const Color yellow = Color(0xffffff00);
+   static const Color white = Color(0xffffffff);
 }
 ```
 
