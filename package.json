@@ -107,7 +107,7 @@
     ]
   },
   "dependencies": {
-    "zem": "^0.4.4"
+    "zem": "^1.3.1"
   },
   "devDependencies": {
     "eslint": "^6.6.0"
