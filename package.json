@@ -11,8 +11,8 @@
     "lint": "eslint src/index.js --fix"
   },
   "author": {
-    "name": "yutae",
-    "email": "yutae.choi@navercorp.com"
+    "name": "dev.it",
+    "email": "dev.it.nm@gmail.com"
   },
   "repository": {
     "type": "git",
