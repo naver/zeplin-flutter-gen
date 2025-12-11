@@ -110,6 +110,6 @@
     "zem": "^2.0.7"
   },
   "devDependencies": {
-    "eslint": "^6.6.0"
+    "eslint": "^9.39.1"
   }
 }
